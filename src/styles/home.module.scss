@@ -1,0 +1,82 @@
+@import './variables.scss';
+
+.contentContainer {
+    margin: 0 auto;
+    height: calc(100vh - $headerHight);
+    padding-left: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .info {
+        height: 100%;
+        padding-top: 5rem;
+        h1 {
+            font-weight: 700;
+            font-size: 3.5rem;
+            color: var(--white);
+
+            a {
+                margin-left: 1rem;
+            }
+        }
+
+        p {
+            max-width: 80%;
+            margin-top: 3.1rem;
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 1.375rem;
+            color: var(--white);
+        }
+
+        .icons {
+            margin-top: 4.25rem;
+
+            a {
+                & + a {
+                    margin-left: 1.4rem;
+                }
+            }
+        }
+    }
+
+
+    .workImage {
+        position: relative;
+        width: 100%;
+        max-width: 542px;
+        height: 100%;
+
+        img {
+            height: 100%;
+    
+        }
+    }
+
+
+    @media screen and (max-width: $mobileBreakpoint) {
+        padding: 2rem 1.5rem 0;
+
+        .info {
+            padding: 0;
+            h1 {
+                font-size: 1.875rem;
+                a {
+                    display: none;
+                }
+            }
+
+            p {
+                max-width: 100%;
+            }
+        }
+
+        .workImage {
+            display: none;
+        }
+        
+    }
+   
+}

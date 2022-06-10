@@ -1,0 +1,86 @@
+@import '../../styles/variables.scss';
+
+.headerContainer {
+    background-color: #0D0D0D;
+    height: $headerHight;
+    border-bottom: 1px solid #4a4a4a;
+    padding: 0 5rem;
+    
+    display: flex;
+    align-items: center;
+
+
+
+    nav {
+        margin-left: 5rem;
+        height: $headerHight;
+        line-height: $headerHight;
+
+        &.navBarMobile{
+            display: none;
+        }
+
+        ul {
+            list-style-type: none;
+            li {
+                display: inline-block;
+                position: relative;
+                padding: 0 0.5rem;
+                height: $headerHight;
+
+                & + li {
+                    margin-left: 2rem;
+                }
+
+                span {
+                    font-weight: 400;
+                    color: var(--white-text);
+                    transition: color 0.2s;
+
+                    &:hover {
+                        color: var(--white);
+                    }
+
+                    &.active {
+                        font-weight: bold;
+                        color: var(--white);
+                    }
+
+                    &.active::after {
+                        content: '';
+                        height: 3px;
+                        border-radius: 3px 3px 0 0;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 1px;
+                        left: 0;
+                        background-color: var(--orange);
+        
+                    }
+                }
+                
+            }
+        }
+    }
+
+
+    
+    @media screen and (max-width: $mobileBreakpoint) {
+        justify-content: space-between;
+        padding: 0 1.5rem;
+
+        > picture {
+            order: 2;
+        }
+
+        nav {
+            display: none;
+            margin: 0;
+            &.navBarMobile {
+                order: 1;
+                display: flex;
+            }
+        }
+        
+    }
+}

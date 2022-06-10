@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  --gray-bg: #1A1A1A;
+  --white-text: #D3D3D3;
+  --white: #ffffff;
+  --orange: #FF7324;
+}
+
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background-color: var(--gray-bg);
+  color: var(--white-text);
+}
+
+body, input, textarea, select,button {
+  font: 400 1rem 'Lato', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
