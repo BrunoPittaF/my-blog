@@ -24,6 +24,7 @@
             list-style-type: none;
             li {
                 display: inline-block;
+                cursor: pointer;
                 position: relative;
                 padding: 0 0.5rem;
                 height: $headerHight;

@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import styles from './styles.module.scss';
+
+import ActiveLink from '../ActiveLink';
 
 export function Header() {
   return (
@@ -14,28 +15,28 @@ export function Header() {
         <nav>
           <ul>
             <li>
-              <Link href="#">
-                <span className={styles.active}>Home</span>
-              </Link>
+              <ActiveLink activeClassName={styles.active} href="/">
+                <span>Home</span>
+              </ActiveLink>
             </li>
             <li>
-              <Link href="#">
+              <ActiveLink activeClassName={styles.active} href="/about">
                 <span>Sobre mim</span>
-              </Link>
+              </ActiveLink>
             </li>
           </ul>
         </nav>
         <nav className={styles.navBarMobile}>
           <ul>
             <li>
-              <Link href="#">
-                <span className={styles.active}>Home</span>
-              </Link>
+              <ActiveLink activeClassName={styles.active} href="/">
+                <span>Home</span>
+              </ActiveLink>
             </li>
             <li>
-              <Link href="#">
+              <ActiveLink activeClassName={styles.active} href="/about">
                 <span>Sobre mim</span>
-              </Link>
+              </ActiveLink>
             </li>
           </ul>
         </nav>
