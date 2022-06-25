@@ -20,8 +20,8 @@ export function Header() {
               </ActiveLink>
             </li>
             <li>
-              <ActiveLink activeClassName={styles.active} href="/about">
-                <span>Sobre mim</span>
+              <ActiveLink activeClassName={styles.active} href="/experience">
+                <span>Experiência</span>
               </ActiveLink>
             </li>
           </ul>

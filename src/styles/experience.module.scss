@@ -1,0 +1,20 @@
+.contentContainer {
+    margin: 0 auto;
+    padding-top: 2.356rem;
+    .mainTitle {
+        font-family: 'Lato';
+        font-weight: 700;
+        font-size: 3.25rem;
+        color: #FF7324;
+        text-align: center;
+        &:after {
+            content: "";
+            display: block;
+            border: 1px solid #FF7324;
+            margin: 37px auto 0;
+            max-width: 971px;
+            width: 100%;
+        }
+    }
+}
+
