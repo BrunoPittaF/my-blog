@@ -1,0 +1,41 @@
+.contentContainer {
+    display: flex;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+
+    .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 303px;
+
+        + .step {
+            margin-left: -22px;
+        }
+
+        &:last-of-type{
+            margin-left: -30px;
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        .arrow {
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 303px;
+            height: 241px;
+        }
+
+        .name {
+            margin-top: 1rem;
+            color: var(--white);
+            font-size: 1rem;
+        }
+    }
+}
