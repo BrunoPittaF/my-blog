@@ -37,12 +37,9 @@ export function Timeline() {
   return (
     <section className={styles.contentContainer}>
       {steps.map((step, index) => (
-        <div key={index} className={styles.step}>
+        <div style={{ zIndex: index * -1 }} key={index} className={styles.step}>
           <span>{step.date}</span>
-          <div
-            style={{ backgroundImage: `url(${step.image})`, zIndex: index * -1 }}
-            className={styles.arrow}
-          ></div>
+          <div style={{ backgroundImage: `url(${step.image})` }} className={styles.arrow}></div>
           <p className={styles.name}>{step.name}</p>
           <p className={styles.description}>{step.description}</p>
         </div>

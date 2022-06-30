@@ -1,3 +1,14 @@
+@keyframes Step {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 .contentContainer {
     display: flex;
     width: 100%;
@@ -10,12 +21,25 @@
         align-items: center;
         justify-content: center;
         max-width: 303px;
-
+        opacity: 0;
         + .step {
             margin-left: -22px;
         }
 
+        &:first-of-type{
+            animation: Step 2s 1s ease-in-out forwards;
+        }
+
+        &:nth-of-type(2) {
+            animation: Step 2s 2s ease-in-out forwards;
+        }
+
+        &:nth-of-type(3) {
+            animation: Step 2s 3s ease-in-out forwards;
+        }
+
         &:last-of-type{
+            animation: Step 2s 4s ease-in-out forwards;
             margin-left: -30px;
         }
 
