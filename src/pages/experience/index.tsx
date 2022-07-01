@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { Timeline } from '../components/Timeline';
-import styles from '../styles/experience.module.scss';
+import { Timeline } from '../../components/Timeline';
+import styles from '../../styles/experience.module.scss';
 
 export default function Experience() {
   return (

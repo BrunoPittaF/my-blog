@@ -24,6 +24,11 @@ export function Header() {
                 <span>Experiência</span>
               </ActiveLink>
             </li>
+            <li>
+              <ActiveLink activeClassName={styles.active} href="/articles">
+                <span>Artigos</span>
+              </ActiveLink>
+            </li>
           </ul>
         </nav>
         <nav className={styles.navBarMobile}>
