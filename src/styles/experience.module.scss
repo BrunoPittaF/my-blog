@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .contentContainer {
     margin: 0 auto;
     padding-top: 2.356rem;
@@ -15,6 +17,17 @@
             margin: 37px auto 0;
             max-width: 971px;
             width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $mobileBreakpoint) {
+        .mainTitle {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            &:after {
+                margin: 20px auto 0;
+                max-width: calc(100% - 2rem);
+            }
         }
     }
     

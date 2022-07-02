@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 @keyframes Step {
     0% {
         opacity: 0;
@@ -60,6 +62,27 @@
             margin-top: 1rem;
             color: var(--white);
             font-size: 1rem;
+        }
+    }
+
+
+    @media screen and (max-width: $mobileBreakpoint) {
+        max-width: 100%;
+        overflow-x: scroll;
+        padding-bottom: 1rem;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        .step {
+            max-width: 260px;
+            .arrow {
+                width: 240px;
+                height: 192px;
+            }
         }
     }
 }
