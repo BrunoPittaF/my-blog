@@ -16,10 +16,6 @@
         height: $headerHight;
         line-height: $headerHight;
 
-        &.navBarMobile{
-            display: none;
-        }
-
         ul {
             list-style-type: none;
             li {
@@ -68,19 +64,23 @@
     
     @media screen and (max-width: $mobileBreakpoint) {
         justify-content: space-between;
-        padding: 0 1.5rem;
+        padding: 0 1rem;
 
         > picture {
             order: 2;
         }
 
         nav {
-            display: none;
-            margin: 0;
-            &.navBarMobile {
-                order: 1;
-                display: flex;
-            }
+            display: flex;
+            order: 1;
+            margin: 0;  
+                ul {
+                    li {
+                        + li {
+                            margin-left: 1rem;
+                        }
+                    }
+                }
         }
         
     }

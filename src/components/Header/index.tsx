@@ -31,20 +31,6 @@ export function Header() {
             </li>
           </ul>
         </nav>
-        <nav className={styles.navBarMobile}>
-          <ul>
-            <li>
-              <ActiveLink activeClassName={styles.active} href="/">
-                <span>Home</span>
-              </ActiveLink>
-            </li>
-            <li>
-              <ActiveLink activeClassName={styles.active} href="/about">
-                <span>Sobre mim</span>
-              </ActiveLink>
-            </li>
-          </ul>
-        </nav>
       </header>
     </>
   );
