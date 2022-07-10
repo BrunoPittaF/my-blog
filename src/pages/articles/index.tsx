@@ -9,7 +9,8 @@ export default function Articles() {
 
   useEffect(() => {
     (async () => {
-      const response = await devToService.getArticles(page);
+      const response = await devToService.getArticlesList(page);
+
       setArticles(response);
     })();
   }, []);
