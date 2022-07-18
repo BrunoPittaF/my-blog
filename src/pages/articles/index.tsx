@@ -13,7 +13,7 @@ export default function Articles() {
 
       setArticles(response);
     })();
-  }, []);
+  }, [page]);
   return (
     <>
       {article.map((article) => (

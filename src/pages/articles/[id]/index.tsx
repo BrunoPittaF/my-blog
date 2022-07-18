@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { devToService } from '../../../services/devTo';
 
-export default function singlePost() {
+export default function SinglePost() {
   const [htmlContent, setHtmlContent] = useState<string>('');
   const [articleTitle, setArticleTitle] = useState<string>('');
   const router = useRouter();

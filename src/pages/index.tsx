@@ -20,6 +20,7 @@ export default function Home() {
               href="https://www.flaticon.com/free-icons/work-in-progress"
               title="Worker illustrations by Storyset"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <Image
                 width={64}
@@ -35,7 +36,7 @@ export default function Home() {
             mais informações, pode acessar minhas redes abaixo :
           </p>
           <div className={styles.icons}>
-            <a href="https://github.com/brunopittaf" target="_blank">
+            <a href="https://github.com/brunopittaf" target="_blank" rel="noopener noreferrer">
               <Image
                 width={24}
                 height={24}
@@ -44,7 +45,7 @@ export default function Home() {
                 alt="github"
               />
             </a>
-            <a href="https://linkedin.com/in/brunopittaf" target="_blank">
+            <a href="https://linkedin.com/in/brunopittaf" target="_blank" rel="noopener noreferrer">
               <Image
                 width={24}
                 height={24}
@@ -60,6 +61,7 @@ export default function Home() {
           href="https://storyset.com/worker"
           title="work in progress icons"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Image
             layout="fill"
