@@ -20,6 +20,23 @@ export const devToService = {
     }
   },
 
+  async getAllArticles(): Promise<any> {
+    try {
+      const response = await api.get('/articles', {
+        params: {
+          username: username,
+          per_page: 9,
+          page: 1,
+          state: 'all',
+        },
+      });
+
+      return response.data;
+    } catch (error) {
+      return Promise.reject(error);
+    }
+  },
+
   async getArticle(id: number): Promise<any> {
     try {
       const response = await api.get(`/articles/${id}`, {
