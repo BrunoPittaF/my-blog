@@ -60,14 +60,42 @@
         }
     }
 
+    .logo {
+        span {
+            max-width: 179px;
+            max-height: 40px;
+            width: 100% !important;
+            height: 100% !important;
+            position: relative !important;
+            
+            + span {
+                display: none !important;
+            }
+
+            img {
+                width: 100% !important;
+                height: 100% !important;
+                position: relative !important;
+            }
+        }
+    }
+
 
     
     @media screen and (max-width: $mobileBreakpoint) {
         justify-content: space-between;
         padding: 0 1rem;
 
-        > picture {
+        > .logo {
             order: 2;
+            width: 100px;
+            margin-bottom: 10px;
+            span {
+                display: none !important;
+                + span {
+                    display: block !important;
+                }
+            }
         }
 
         nav {

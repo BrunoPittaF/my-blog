@@ -1,16 +1,27 @@
 import styles from './styles.module.scss';
-
+import Image from 'next/image';
 import ActiveLink from '../ActiveLink';
 
 export function Header() {
   return (
     <>
       <header className={styles.headerContainer}>
-        <picture>
-          <source srcSet="/images/logo.svg" media="(min-width: 769px)" type="image/png" />
-          <source srcSet="/images/logo-mobile.svg" media="(max-width: 768px)" type="image/png" />
-          <img src="/images/logo.svg" alt="Dono do website" />
-        </picture>
+        <div className={styles.logo}>
+          <Image
+            className="desktopImage"
+            layout="fill"
+            objectFit="cover"
+            src="/images/logo.svg"
+            alt="Dono do website"
+          />
+          <Image
+            className="mobileImage"
+            layout="fill"
+            objectFit="cover"
+            src="/images/logo-mobile.svg"
+            alt="Dono do website"
+          />
+        </div>
 
         <nav>
           <ul>
