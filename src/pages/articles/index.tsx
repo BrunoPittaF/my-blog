@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { IArticle } from '../../interfaces';
@@ -16,6 +17,13 @@ export default function Articles() {
   }, [page]);
   return (
     <>
+      <Head>
+        <title>Artigos de estudo | caio.dev</title>
+        <meta
+          name="description"
+          content="Artigos de estudo feitos por Caio Bruno Pitta Figueiredo"
+        />
+      </Head>
       {article.map((article) => (
         <Link key={article.id} href={`/articles/${encodeURIComponent(article.id)}`}>
           <div>
