@@ -13,6 +13,7 @@ export function Header() {
             objectFit="cover"
             src="/images/logo.svg"
             alt="Dono do website"
+            title="Dono do website"
           />
           <Image
             className="mobileImage"
@@ -20,6 +21,7 @@ export function Header() {
             objectFit="cover"
             src="/images/logo-mobile.svg"
             alt="Dono do website"
+            title="Dono do website"
           />
         </div>
 
