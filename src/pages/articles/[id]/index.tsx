@@ -1,24 +1,22 @@
-import Router, { useRouter } from 'next/router';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { useEffect, useState } from 'react';
+import Head from 'next/head';
 import { devToService } from '../../../services/devTo';
 
-export default function SinglePost({ htmlContent, articleTitle }) {
-  // const [content, setContent] = useState<string>('');
-  // const [title, setTitle] = useState<string>('');
-  // const router = useRouter();
-  // const { id } = router.query;
-
-  // useEffect(() => {
-  //   (async () => {
-  //     const response = await devToService.getArticle(Number(id));
-  //     setContent(response.body_html);
-  //     setTitle(response.title);
-  //   })();
-  // }, [id]);
-
+export default function SinglePost({
+  htmlContent,
+  articleTitle,
+  description,
+}: {
+  htmlContent: string;
+  articleTitle: string;
+  description: string;
+}) {
   return (
     <>
+      <Head>
+        <title>{articleTitle} | caio.dev</title>
+        <meta name="description" content={description} />
+      </Head>
       <h1>{articleTitle}</h1>
       <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
     </>
@@ -39,11 +37,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const response = await devToService.getArticle(Number(params.id));
+  console.log(response);
 
   return {
     props: {
       htmlContent: response.body_html,
       articleTitle: response.title,
+      description: response.description,
     },
   };
 };
