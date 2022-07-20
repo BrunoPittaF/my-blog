@@ -37,7 +37,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const response = await devToService.getArticle(Number(params.id));
-  console.log(response);
 
   return {
     props: {
