@@ -5,9 +5,11 @@
 .articleContent {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
 
     img {
         margin: 0 auto;
+        max-width: 100%;
     }
 
     hr {
