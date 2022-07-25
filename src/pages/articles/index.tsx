@@ -1,3 +1,4 @@
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -5,16 +6,7 @@ import { IArticle } from '../../interfaces';
 import { devToService } from '../../services/devTo';
 import styles from '../../styles/articles.module.scss';
 
-export default function Articles() {
-  const [page, setPage] = useState<number>(1);
-  const [article, setArticles] = useState<IArticle[]>([]);
-
-  useEffect(() => {
-    (async () => {
-      const response = await devToService.getArticlesList(page);
-      setArticles(response);
-    })();
-  }, [page]);
+export default function Articles({ response }: { response: IArticle[] }) {
   return (
     <>
       <Head>
@@ -24,7 +16,7 @@ export default function Articles() {
           content="Artigos de estudo feitos por Caio Bruno Pitta Figueiredo"
         />
       </Head>
-      {article.map((article) => (
+      {response.map((article) => (
         <Link key={article.id} href={`/articles/${encodeURIComponent(article.id)}`}>
           <div className={styles.articleWrapper}>
             <h2>{article.title}</h2>
@@ -48,3 +40,13 @@ export default function Articles() {
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const response = await devToService.getArticlesList(1);
+
+  return {
+    props: {
+      response,
+    },
+  };
+};

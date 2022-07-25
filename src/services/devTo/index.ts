@@ -10,7 +10,7 @@ export const devToService = {
           username: username,
           per_page: 9,
           page: page,
-          state: 'all',
+          state: 'fresh',
         },
       });
 

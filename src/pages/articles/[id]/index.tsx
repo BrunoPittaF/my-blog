@@ -36,7 +36,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     },
   }));
 
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -48,5 +48,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       articleTitle: response.title,
       description: response.description,
     },
+    revalidate: 86400, // revalidate every 24 hours
   };
 };
