@@ -1,0 +1,25 @@
+.articleWrapper {
+    padding: 1rem;
+}
+
+.articleContent {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        margin: 0 auto;
+    }
+
+    hr {
+        margin: 20px 0px;
+
+        + p {
+            margin-top: 0;
+        }
+    }
+
+    p {
+        margin: 0px 0px 5px;
+
+    }
+}

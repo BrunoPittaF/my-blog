@@ -1,6 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
+import { IArticle } from '../../../interfaces';
 import { devToService } from '../../../services/devTo';
+import styles from '../../../styles/singleArticle.module.scss';
 
 export default function SinglePost({
   htmlContent,
@@ -17,8 +19,10 @@ export default function SinglePost({
         <title>{articleTitle} | caio.dev</title>
         <meta name="description" content={description} />
       </Head>
-      <h1>{articleTitle}</h1>
-      <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+      <div className={styles.articleWrapper}>
+        <h1>{articleTitle}</h1>
+        <div className={styles.articleContent} dangerouslySetInnerHTML={{ __html: htmlContent }} />
+      </div>
     </>
   );
 }
@@ -26,7 +30,7 @@ export default function SinglePost({
 export const getStaticPaths: GetStaticPaths = async () => {
   const response = await devToService.getAllArticles();
 
-  const paths = response.map((article: any) => ({
+  const paths = response.map((article: IArticle) => ({
     params: {
       id: article.id.toString(),
     },
