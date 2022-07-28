@@ -1,7 +1,6 @@
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { IArticle } from '../../interfaces';
 import { devToService } from '../../services/devTo';
 import styles from '../../styles/articles.module.scss';

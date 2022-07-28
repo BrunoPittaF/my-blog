@@ -15,9 +15,11 @@ describe('Articles List', () => {
 
     render(<Articles response={[articlesMock]} />);
 
+    console.log(render(<Articles response={[articlesMock]} />));
+
     const titleArticle = screen.getByText('Article 1');
     const descriptionArticle = screen.getByText('This is a description');
-    const dateArticle = screen.getByText('31 de dez. de 2017');
+    const dateArticle = screen.getByText('1 de fev. de 2018');
 
     await waitFor(() => {
       expect(titleArticle).toBeInTheDocument();
