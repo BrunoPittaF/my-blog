@@ -15,8 +15,6 @@ describe('Articles List', () => {
 
     render(<Articles response={[articlesMock]} />);
 
-    console.log(render(<Articles response={[articlesMock]} />));
-
     const titleArticle = screen.getByText('Article 1');
     const descriptionArticle = screen.getByText('This is a description');
     const dateArticle = screen.getByText('1 de fev. de 2018');
