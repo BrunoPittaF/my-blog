@@ -24,6 +24,7 @@
         justify-content: center;
         max-width: 303px;
         opacity: 0;
+        margin-bottom: auto;
         + .step {
             margin-left: -22px;
         }
@@ -63,13 +64,24 @@
             color: var(--white);
             font-size: 1rem;
         }
+
+        .description {
+            margin: 1rem auto 0;
+            max-width: 260px; 
+            height: 170px;
+        }
+
+        .techs {
+        margin: 1rem auto 0;
+        width: 260px;
+        }
     }
 
 
     @media screen and (max-width: $mobileBreakpoint) {
         max-width: 100%;
         overflow-x: scroll;
-        padding-bottom: 1rem;
+        padding: 0 2rem 1rem;
         -ms-overflow-style: none;
         scrollbar-width: none;
         
@@ -79,9 +91,19 @@
 
         .step {
             max-width: 260px;
+
+            + .step {
+                margin-left: 0px;
+            }
             .arrow {
                 width: 240px;
                 height: 192px;
+            }
+            .description {
+                width: 240px;
+            }
+            .techs {
+                width: 240px;
             }
         }
     }

@@ -33,16 +33,20 @@ export default function Home() {
           </h1>
           <p>
             Em breve estaremos funcionando com todas as funcionalidades, mas caso já queira saber
-            mais informações, pode acessar minhas redes abaixo :
+            mais informações, pode acessar o figma do projeto e o meu linkedin :
           </p>
           <div className={styles.icons}>
-            <a href="https://github.com/brunopittaf" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.figma.com/file/W5s0wsYtQ7y11sqQVw7j3Z/Meu-blog-pessoal?node-id=0%3A1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 width={24}
                 height={24}
-                src="/images/icons/github.png"
-                title="github"
-                alt="github"
+                src="/images/icons/figma.png"
+                title="figma"
+                alt="figma"
               />
             </a>
             <a href="https://linkedin.com/in/brunopittaf" target="_blank" rel="noopener noreferrer">
