@@ -1,14 +1,20 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ActiveLink from '.';
 
-const useRouter = jest.spyOn(require('next/router'), 'useRouter');
-useRouter.mockImplementationOnce(() => ({
-  asPath: '/',
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '',
+      query: '',
+      asPath: '/',
+    };
+  },
 }));
 
 describe('ActiveLink component tests', () => {
-  test('renders without crashing', () => {
+  it('renders without crashing', () => {
     render(
       <ActiveLink activeClassName="active" href="experience">
         <span>Experience</span>

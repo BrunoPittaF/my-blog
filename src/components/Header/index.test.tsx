@@ -4,9 +4,15 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Header } from './index';
 
-const useRouter = jest.spyOn(require('next/router'), 'useRouter');
-useRouter.mockImplementationOnce(() => ({
-  asPath: '/',
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '',
+      query: '',
+      asPath: '/',
+    };
+  },
 }));
 
 describe('Header', () => {
