@@ -1,7 +1,7 @@
 import { render, screen, act, waitFor } from '@testing-library/react';
 import MockAdapter from 'axios-mock-adapter';
 import '@testing-library/jest-dom';
-import Articles from './index';
+import Articles from '../../pages/articles/index';
 import api from '../../services/api';
 import { articlesMock } from '../../mocks/articlesMocks';
 
