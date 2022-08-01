@@ -40,8 +40,9 @@ export default function Articles({ response }: { response: IArticle[] }) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   const response = await devToService.getArticlesList(1);
+  res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=59');
 
   return {
     props: {
