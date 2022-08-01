@@ -17,8 +17,9 @@ Para acompanhar a evolução do layout, feito por mim, cliquem [aqui](https://ww
 - [x] Animação na tela de experiências
 - [x] Integração com o dev.to
 - [x] 100% Orientado a SEO
-- [] Seção para comentários
 - [] 100% de coverage nos testes
+- [] Postagem do primeiro artigo
+- [] Lançamento versão 1.0
 
 ## Licença
 
