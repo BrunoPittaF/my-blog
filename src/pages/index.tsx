@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/home.module.scss';
 
 import Image from 'next/image';
+import Link from 'next/link';
 export default function Home() {
   return (
     <>
@@ -58,6 +59,36 @@ export default function Home() {
                 alt="linkedin"
               />
             </a>
+
+            <p style={{ marginBottom: '20px' }}>Sites feitos por mim, ou com a minha participação:</p>
+            <Link href="https://modaisemfoco.com.br/">
+              <a style={{ textDecoration: 'underline', color: 'white', cursor: 'pointer' }}>Modais em foco</a>
+            </Link>
+
+
+            <Link href="https://www.vxcase.com.br/">
+              <a style={{ textDecoration: 'underline', color: 'white', cursor: 'pointer' }}>Vx Case</a>
+            </Link>
+
+            <Link href="https://nvgo.com.br/">
+              <a style={{ textDecoration: 'underline', color: 'white', cursor: 'pointer' }}>NVGO</a>
+            </Link>
+
+            <Link href="https://www.uol.com.br/">
+              <a style={{ textDecoration: 'underline', color: 'white', cursor: 'pointer' }}>UOL</a>
+            </Link>
+
+            <p style={{ marginBottom: '20px' }}>Protótipos feitos por mim:</p>
+            <Link href="https://www.figma.com/file/IQWR0hwVaAgep7WvDy3iy5/Contabilidade?node-id=0%3A1">
+              <a style={{ textDecoration: 'underline', color: 'white', cursor: 'pointer' }}>Contabilidade</a>
+            </Link>
+
+            <Link href="https://www.figma.com/file/PiOCPtDRMokgXxOwHKXOW7/SmartBuy?node-id=0%3A1">
+              <a style={{ textDecoration: 'underline', color: 'white', cursor: 'pointer' }}>Sistema de mercado</a>
+            </Link>
+
+
+
           </div>
         </section>
         <a

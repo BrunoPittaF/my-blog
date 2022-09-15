@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './styles.module.scss';
 
 interface IStep {
@@ -6,6 +7,7 @@ interface IStep {
   techs: string[];
   name: string;
   description: string;
+  destination: string;
 }
 
 export function Timeline() {
@@ -26,6 +28,7 @@ export function Timeline() {
         'Figma',
         'Adobe XD',
       ],
+      destination: 'https://nvgo.com.br/',
       image: '/images/nvgo.png',
       name: 'NVGO',
     },
@@ -44,6 +47,7 @@ export function Timeline() {
         'Figma',
         'Adobe XD',
       ],
+      destination: 'https://www.vxcase.com.br/',
       image: '/images/vxcase.png',
       name: 'VX Case',
     },
@@ -53,6 +57,7 @@ export function Timeline() {
         'Auxiliar alunos com dúvidas e esclarecimentos em projetos no curso em parceria com o IFOOD.',
       techs: ['React', 'Material UI', 'Sass', 'HTML', 'Figma'],
       image: '/images/cubos-academy.png',
+      destination: 'https://cubos.academy/',
       name: 'Cubos Academy',
     },
     {
@@ -61,6 +66,7 @@ export function Timeline() {
         'Desenvolvimento de layouts e peças publicitárias ,Criação de novo template de publicidade criação de novo template de publicidade utilizando Typescript, Integração com sistemas externos de publicidade: ad servers e parceiros para publicidades de retargeting, manuntenção de teste unitários',
       techs: ['React', 'Typescript', 'Javascript', 'Sass', 'Photoshop', 'Figma', 'HTML'],
       image: '/images/uol.png',
+      destination: '',
       name: 'UOL',
     },
   ];
@@ -69,7 +75,11 @@ export function Timeline() {
       {steps.map((step, index) => (
         <div style={{ zIndex: index * -1 }} key={index} className={styles.step}>
           <span>{step.date}</span>
-          <div style={{ backgroundImage: `url(${step.image})` }} className={styles.arrow}></div>
+          <Link href={step.destination}>
+            <a>
+              <div style={{ backgroundImage: `url(${step.image})` }} className={styles.arrow}></div>
+            </a>
+          </Link>
           <p className={styles.name}>{step.name}</p>
           <p className={styles.description}>{step.description}</p>
           <div className={styles.techs}>
